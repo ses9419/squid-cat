@@ -23,17 +23,17 @@ const INITIALIZE = true;
 
 async function main(){
     console.log("let's name some token-22 tokens in 2024!");
-    const myKeypair = loadWalletKey("AndyUCWqhEnEMqHAByoRSHz2mvQxdyXyki9UQ7YCrTBY.json");
-    const mint = new web3.PublicKey("SD2idHukkWPziSuhVnD6yf2gNbgzGYzyvv7787ZvazK");
+    const myKeypair = loadWalletKey("TtwBYUH1ZRBNftu6YjnW7AYrPHG6VFRAB75RC5ys5Bd.json");
+    const mint = new web3.PublicKey("6bn34eSLDwv4cCTYmyQCABmwxzacx2pqZaV6cBW1Bvp1");
 
     const umi = createUmi("https://api.devnet.solana.com");
     const signer = createSignerFromKeypair(umi, fromWeb3JsKeypair(myKeypair))
     umi.use(signerIdentity(signer, true))
 
     const ourMetadata = { // TODO change those values!
-        name: "Silly Dragon Token Extended", 
-        symbol: "SDT",
-        uri: "https://raw.githubusercontent.com/loopcreativeandy/video-tutorial-resources/main/metadataUpdate/metadata.json",
+        name: "SQUID CAT", 
+        symbol: "SCI",
+        uri: "https://raw.githubusercontent.com/ses9419/squid-cat/main/video-tutorial-resources-main/metadataUpdate/metadata.json",
     }
     if(INITIALIZE){
         const onChainData = {
